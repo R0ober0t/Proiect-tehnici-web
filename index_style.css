@@ -12,6 +12,7 @@ footer{
     border-top:solid white 0.2px;
 }
 header{
+    flex: 0 0 auto;
     border-bottom:solid white 0.2px;
 }
 
@@ -72,7 +73,7 @@ body {
     border-radius: 20%;
 }
 
-#Welcome > h1{
+main h1{
     font-size: 67px;
     color: #7DD3FC;
     margin: 0.4em 0;
@@ -86,16 +87,18 @@ body {
     text-align: center;
     margin:auto;
 }
-li > a{
+nav ul li:nth-of-type(n) > a{
     text-decoration: none;
     display: inline-block;
-    transition: color 0.2s ease;
+    padding: 6px 10px;
+    border-radius: 6px;
+    transition: color 0.5s ease, background-color 0.2s ease, transform 0.4s ease;
     color: #CBD5E1;
-    
 }
 
-li > a:hover{
+nav ul li:nth-of-type(n) > a:hover{
     color: #67E8F9;
+    background-color: #1E293B;
     transform: translate(0px, -2px);
 }
 
@@ -193,12 +196,28 @@ footer p {
     padding: 12px;
 }
 
+#contact{
+    border-radius: 12px;
+    background-color: #101625;
+    border: solid white 2px;
+    margin-top: 5%;
+    
+}
+
+#projects{
+    justify-content: center;
+}
+.sections{
+    margin-top:10%;
+    margin-bottom: 5%;
+}
+
 @media (max-width: 768px) {
 
     #hero-section{
         flex-direction: column;
     }
-    #Welcome > h1{
+    main h1{
         font-size: 40px;
         
     }
@@ -246,7 +265,7 @@ footer p {
     #hero-section{
         flex-direction: column;
     }
-    #Welcome > h1{
+    main h1{
         font-size: 32px;
     }
     img{

@@ -1,0 +1,61 @@
+figure{
+    animation-name:slideUp;
+    animation-duration:15s;
+}
+article{
+    animation-name:slideUp;
+    animation-duration:2s;
+}
+
+#turtle{
+    display: block;
+    margin-bottom: 20px;
+    margin-inline: auto;
+    animation-name:theTruth;
+    animation-duration:10s;
+    animation-iteration-count: infinite;
+    
+}
+
+@keyframes slideUp {
+    from { transform: translateY(300%); }
+    to   { transform: translateY(0); }
+}
+
+@keyframes theTruth{
+    0%{
+        border: 0px rgb(227, 56, 56) solid; 
+        opacity: 0;
+        border-bottom: 20px rgb(227, 56, 56) solid;
+        transform: rotate(60deg);
+    }
+    20%{
+        border: 0px rgb(227, 56, 56) solid;
+        opacity: 0.2;
+        border-right: 20px rgb(227, 56, 56) solid;
+        transform: rotate(120deg);
+    }
+    40%{
+        border: 0px rgb(227, 56, 56) solid;
+        opacity: 0.4;
+        border-top: 20px rgb(227, 56, 56) solid;
+        transform: rotate(180deg);
+    }
+    60%{
+        border: 0px rgb(227, 56, 56) solid;
+        opacity: 0.6;
+        border-left: 20px rgb(227, 56, 56) solid;
+        transform: rotate(240deg);
+    }
+    80%{
+        border: 0px rgb(227, 56, 56) solid;
+        opacity: 0.8;
+        border: 20px rgb(227, 56, 56) solid;
+        transform: rotate(300deg);
+    }
+    100%{
+        opacity: 1;
+        border: 0px rgb(227, 56, 56) solid;
+        transform: rotate(360deg);
+    }
+}
