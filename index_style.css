@@ -1,10 +1,12 @@
 header, footer {
-    background-color: #0b0f19;
+    background-color: #101625;
     flex: 1;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    color:white;
+    color: #E2E8F0;
+    flex-direction: row;
+
 }
 footer{
     border-top:solid white 0.2px;
@@ -20,20 +22,27 @@ p{
 main {
     background-color: #0b0f19;
     flex: 10;
-    color:white;
+    color: #E2E8F0;
 }
 
 .sections{
-    margin:5%;
+    margin: 2% 5%;
 }
 
 .nav-bar-list{
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+
+ul{
+    list-style-type: none;
 }
 
 .nav-bar-list > li{
     font-size: 25px;
+    color: #B8C4D4;
+    margin-left: 15px;
 }
 
 body {
@@ -43,7 +52,239 @@ body {
     margin: 0;
 }
 
+#hero-section{
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: space-evenly;
+}
 
-@media (max-width: 600px) {
 
+#hero-section > figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 1 40%;
+}
+
+
+#LiterallyMe{
+    border-radius: 20%;
+}
+
+#Welcome > h1{
+    font-size: 67px;
+    color: #7DD3FC;
+    margin: 0.4em 0;
+}
+
+.nav-mobile{
+    display: none;
+}
+
+#Welcome{
+    text-align: center;
+    margin:auto;
+}
+li > a{
+    text-decoration: none;
+    display: inline-block;
+    transition: color 0.2s ease;
+    color: #CBD5E1;
+    
+}
+
+li > a:hover{
+    color: #67E8F9;
+    transform: translate(0px, -2px);
+}
+
+.intro{
+    padding: 16px;
+    font-size: 28px;    
+}
+
+.dropdown-button{
+    border-radius: 25%;
+    border:none;
+    background-color: red;
+    color: #FFFFFF;
+    font-weight: bold;
+    height: 40px;
+    width: 50px;
+    display: none;
+}
+
+#skills{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 2% 5%;
+
+}
+
+/* #skills > section > div{
+    text-align: center;
+    width: 120px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    border: 2px solid rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 60px;
+} */
+#skills #tools .divider > div {
+    text-align: center;
+    width: 120px;
+    height: 60px;
+    margin-bottom: 8px;
+    border: 2px solid white;
+    border-radius: 10px;
+}
+
+#skills > #tools{
+    display: flex;
+    flex-direction: column;
+}
+#skills > #tools > .divider {
+    display: grid;
+    grid-template-columns: repeat(2, 120px);
+    gap: 8px;
+}
+
+#skills #tools .divider > div {
+    width: auto;
+    height: 60px;
+    margin-bottom: 0;
+    box-sizing: border-box;
+}
+
+h2{
+    font-size: 30px;
+    color: #7DD3FC;
+}
+
+#title-section > h1 {
+    color: #E2E8F0;
+}
+
+#hero-section figcaption {
+    color: #94A3B8;
+}
+
+footer p {
+    color: #E2E8F0;
+}
+
+#projects > div{
+    border-radius: 12px;
+    background-color: #101625;
+}
+
+#projects{
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap:2rem;
+}
+
+#projects > div{
+    border-radius: 12px;
+    border:solid white ;
+    padding: 12px;
+}
+
+@media (max-width: 768px) {
+
+    #hero-section{
+        flex-direction: column;
+    }
+    #Welcome > h1{
+        font-size: 40px;
+        
+    }
+    .nav-bar-list {
+        display: none;
+    }
+
+    .dropdown-button {
+        display: block;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .nav-mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1;
+        flex-direction: column;
+        gap: 12px;
+        margin: 0;
+        padding: 16px;
+        background-color: #101625;
+    }
+
+    nav:hover > .nav-mobile,
+    nav:focus-within > .nav-mobile {
+        display: flex;
+    }
+    #skills {
+        flex-direction: row;
+        align-items: center;
+    }
+    #projects {
+        flex-direction: column;
+    }
+}
+
+
+
+@media (max-width: 440px) {
+    #hero-section{
+        flex-direction: column;
+    }
+    #Welcome > h1{
+        font-size: 32px;
+    }
+    img{
+        width: 300px;
+    }
+    .nav-bar-list {
+        display: none;
+    }
+
+    .dropdown-button {
+        display: block;
+    }
+
+    nav {
+        position: relative;
+    }
+
+    .nav-mobile {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        z-index: 1;
+        flex-direction: column;
+        gap: 12px;
+        margin: 0;
+        padding: 16px;
+        background-color: #101625;
+    }
+
+    nav:hover > .nav-mobile,
+    nav:focus-within > .nav-mobile {
+        display: flex;
+    }
+    #skills {
+        flex-direction: column;
+    }
+    #projects{
+        flex-direction: column;
+    }
 }
